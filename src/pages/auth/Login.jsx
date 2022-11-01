@@ -6,14 +6,15 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <div className='bg-secondary-100 p-8 rounded-lg'>
-            <h1 className='text-3xl uppercase font-bold tracking-[5px] text-center text-tertiary mb-8 w-auto lg:w-[350px]'>
+        <div className='bg-secondary-100 p-8 rounded-lg w-auto lg:w-[350px]'>
+            <h1 className='text-3xl uppercase font-bold tracking-[5px] text-center text-tertiary mb-8'>
                 Login
             </h1>
             <form className='mb-6'>
-                <button className='flex items-center justify-center py-2 px-4 gap-2 bg-secondary-900 w-full cursor-pointer rounded-full mb-6 text-tertiary'>
+                <button className='flex items-center justify-center py-2 px-4 gap-2 bg-secondary-900 w-full cursor-pointer rounded-full mb-4 text-tertiary'>
                     <FcGoogle className='w-4 h-4' />Login with Google
                 </button>
+                <span className='w-full flex items-center justify-center text-center mb-4'>or</span>
                 <div className='relative mb-4'>
                     <RiMailLine className='absolute top-1/2 -translate-y-1/2 left-2 text-primary'/>
                     <input type="email" 

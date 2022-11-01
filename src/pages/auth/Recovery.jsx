@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Recovery = () => {
 
     return (
-        <div className='bg-secondary-100 p-8 rounded-lg'>
-            <h1 className='text-2xl uppercase font-bold tracking-[5px] text-center text-tertiary mb-6 w-auto lg:w-[350px]'>
+        <div className='bg-secondary-100 p-8 rounded-lg w-auto lg:w-[350px]'>
+            <h1 className='text-2xl uppercase font-bold tracking-[5px] text-center text-tertiary mb-6'>
                 Enter your Email to recover your password
             </h1>
             <form className='mb-6'>
@@ -20,14 +20,17 @@ const Recovery = () => {
                 </div>
                 <div>
                     <button type='submit' 
-                            className='py-2 px-4 bg-primary text-secondary-900 w-full uppercase tracking-[2px] font-bold cursor-pointer rounded-lg hover:text-secondary-100 transition-colors hover:-translate-y-[2px]'>
+                            className='py-2 px-4 bg-primary text-secondary-900 w-full uppercase tracking-[2px] font-bold rounded-lg hover:text-secondary-100 transition-colors'>
                         Recover Password
                     </button>
                 </div>
             </form>
             <div className='flex flex-col gap-4 items-center mb-1'>
                 <span className='flex items-center gap-2'>
-                    Already have an account?<Link to='/auth' className='hover:underline text-primary'>Login</Link>
+                    Already have an account?
+                    <Link to='/auth' className='hover:underline text-primary'>
+                        Login
+                    </Link>
                 </span>
             </div>
         </div>
