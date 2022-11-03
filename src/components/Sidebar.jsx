@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { RiLogoutBoxRLine, RiBarChart2Line, RiEarthLine, 
-         RiMessage2Line, RiCalendarEventLine, RiSettings5Line, 
-         RiArrowRightSLine, RiMenuFill, RiCloseLine } from "react-icons/ri";
+import { RiLogoutBoxLine, RiBarChart2Line, RiEarthLine, 
+         RiCalendarEventLine, RiSettings5Line, RiArrowRightSLine, 
+         RiMenuFill, RiCloseLine, RiCustomerService2Line } from "react-icons/ri";
+         
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -9,7 +10,7 @@ const Sidebar = () => {
     const [showSidebar, setShowSidebar] = useState(false);
   return (
     <>
-      <div className={`xl:h-[100vh] xl:static overflow-y-scroll fixed bg-secondary-100 w-[60%] md:w-[40%] lg:w-[30%] h-full top-0 p-6 no-scrollbar flex flex-col 
+      <div className={`xl:h-[100vh] xl:static overflow-y-scroll fixed bg-secondary-100 w-[60%] md:w-[40%] lg:w-[30%] xl:w-auto h-full top-0 p-6 no-scrollbar flex flex-col 
       justify-between z-50 ${showSidebar ? 'left-0' : '-left-full'} transition-all`}>
             <div>
                 <h1 className='text-center text-2xl font-bold mb-10'>
@@ -31,7 +32,7 @@ const Sidebar = () => {
                             </span>
                                 <RiArrowRightSLine className={`text-primary ${showSubMenu && 'rotate-90'} transition-all`}/>
                         </button>
-                        <ul className={`my-2 ${!showSubMenu && 'hidden'}`}>
+                        <ul className={`${showSubMenu ? 'h-[160px]' : 'h-0'} overflow-y-hidden transition-all`}>
                             <li>
                                 <Link to="/"
                                     className='py-2 px-4 border-l border-tertiary block relative ml-4 cursor-pointer before:w-3 before:h-3 before:absolute 
@@ -69,15 +70,15 @@ const Sidebar = () => {
                     <li>
                         <Link to="/" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                            <RiMessage2Line className='text-primary' />
-                            Messages
+                            <RiCalendarEventLine className='text-primary' />
+                            Schedule
                         </Link>
                     </li>
                     <li>
                         <Link to="/" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                            <RiCalendarEventLine className='text-primary' />
-                            Schedule
+                            <RiCustomerService2Line className='text-primary' />
+                            Tech Support
                         </Link>
                     </li>
                     <li>
@@ -90,14 +91,14 @@ const Sidebar = () => {
                 </ul>
             </div>
             <nav>
-                <Link to="/" className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                    <RiLogoutBoxRLine className='text-primary' />
+                <Link to='/auth' className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
+                    <RiLogoutBoxLine className='text-primary' />
                     Logout
                 </Link>
             </nav>
       </div>
       <button onClick={() => setShowSidebar(!showSidebar)}
-              className="fixed right-4 bottom-4 z-50 rounded-full p-3 text-secondary-100 bg-primary">
+              className="fixed xl:hidden right-4 bottom-4 z-50 rounded-full p-3 text-secondary-100 bg-primary">
         {!showSidebar ? ( 
             <RiMenuFill />
         ) : (
