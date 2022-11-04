@@ -34,7 +34,7 @@ const Sidebar = () => {
                         </button>
                         <ul className={`${showSubMenu ? 'h-[160px]' : 'h-0'} overflow-y-hidden transition-all`}>
                             <li>
-                                <Link to="/"
+                                <Link to="/posts"
                                     className='py-2 px-4 border-l border-tertiary block relative ml-4 cursor-pointer before:w-3 before:h-3 before:absolute 
                                     before:bg-tertiary before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 hover:text-tertiary 
                                     before:border-4 before:border-secondary-100'>
@@ -42,7 +42,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/"
+                                <Link to="/stats"
                                     className='py-2 px-4 border-l border-tertiary block relative ml-4 cursor-pointer before:w-3 before:h-3 before:absolute 
                                     before:bg-tertiary before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 hover:text-tertiary 
                                     before:border-4 before:border-secondary-100'>
@@ -50,7 +50,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/"
+                                <Link to="/profile"
                                     className='py-2 px-4 border-l border-tertiary block relative ml-4 cursor-pointer before:w-3 before:h-3 before:absolute 
                                     before:bg-tertiary before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 hover:text-tertiary 
                                     before:border-4 before:border-secondary-100'>
@@ -58,7 +58,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/"
+                                <Link to="/followers"
                                     className='py-2 px-4 border-l border-tertiary block relative ml-4 cursor-pointer before:w-3 before:h-3 before:absolute 
                                     before:bg-tertiary before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 hover:text-tertiary 
                                     before:border-4 before:border-secondary-100'>
@@ -68,21 +68,21 @@ const Sidebar = () => {
                         </ul>
                     </li>
                     <li>
-                        <Link to="/" 
+                        <Link to="/schedule" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
                             <RiCalendarEventLine className='text-primary' />
                             Schedule
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" 
+                        <Link to="/support" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
                             <RiCustomerService2Line className='text-primary' />
                             Tech Support
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" 
+                        <Link to="/settings"  
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
                             <RiSettings5Line className='text-primary' />
                             Settings
