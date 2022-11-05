@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RiLogoutBoxLine, RiBarChart2Line, RiEarthLine, 
+import { RiLogoutBoxLine, RiBarChart2Line, RiTeamLine, 
          RiCalendarEventLine, RiSettings5Line, RiArrowRightSLine, 
          RiMenuFill, RiCloseLine, RiCustomerService2Line } from "react-icons/ri";
          
@@ -20,7 +20,7 @@ const Sidebar = () => {
                     <li>
                         <Link to="/" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                            <RiBarChart2Line className='text-primary' />
+                            <RiBarChart2Line className='text-primary text-xl' />
                             Analytics
                         </Link>
                     </li>
@@ -28,9 +28,9 @@ const Sidebar = () => {
                         <button onClick={() => setShowSubMenu(!showSubMenu)} 
                             className='flex items-center justify-between w-full py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
                             <span className='flex items-center gap-4'>
-                                <RiEarthLine className='text-primary' /> Social Media
+                                <RiTeamLine className='text-primary text-xl' /> Social Media
                             </span>
-                                <RiArrowRightSLine className={`text-primary ${showSubMenu && 'rotate-90'} transition-all`}/>
+                                <RiArrowRightSLine className={`text-primary text-xl ${showSubMenu && 'rotate-90'} transition-all`}/>
                         </button>
                         <ul className={`${showSubMenu ? 'h-[160px]' : 'h-0'} overflow-y-hidden transition-all`}>
                             <li>
@@ -70,21 +70,21 @@ const Sidebar = () => {
                     <li>
                         <Link to="/schedule" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                            <RiCalendarEventLine className='text-primary' />
+                            <RiCalendarEventLine className='text-primary text-xl' />
                             Schedule
                         </Link>
                     </li>
                     <li>
                         <Link to="/support" 
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                            <RiCustomerService2Line className='text-primary' />
+                            <RiCustomerService2Line className='text-primary text-xl' />
                             Tech Support
                         </Link>
                     </li>
                     <li>
                         <Link to="/settings"  
                             className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                            <RiSettings5Line className='text-primary' />
+                            <RiSettings5Line className='text-primary text-xl' />
                             Settings
                         </Link>
                     </li>
@@ -92,7 +92,7 @@ const Sidebar = () => {
             </div>
             <nav>
                 <Link to='/auth' className='flex items-center gap-4 py-2 px-2 rounded-lg cursor-pointer hover:bg-secondary-900 transition-colors'>
-                    <RiLogoutBoxLine className='text-primary' />
+                    <RiLogoutBoxLine className='text-primary text-xl' />
                     Logout
                 </Link>
             </nav>
@@ -100,14 +100,13 @@ const Sidebar = () => {
       <button onClick={() => setShowSidebar(!showSidebar)}
               className="fixed xl:hidden right-4 bottom-4 z-50 rounded-full p-3 text-secondary-100 bg-primary">
         {!showSidebar ? ( 
-            <RiMenuFill />
+            <RiMenuFill className="text-xl" />
         ) : (
-            <RiCloseLine />
+            <RiCloseLine className="text-xl" />
             )
         }
       </button>
     </>
-
   )
 }
 
