@@ -45,9 +45,9 @@ const Header = () => {
               Notifications
             </h1>
             {/* <hr className="border-t border-solid border-secondary-900 my-2" /> */}
-            <MenuDivider className="h-px font-bold bg-secondary-900 my-2" />
+            <MenuDivider className="h-px font-bold bg-secondary-900 my-4" />
             <MenuItem className='p-0 hover:bg-transparent text-tertiary'>
-              <Link to='' className="flex items-center gap-2 py-2 px-4 hover:bg-secondary-900 transition-colors rounded-lg">
+              <Link to="/profile" className="flex flex-1 items-center gap-2 py-2 px-4 hover:bg-secondary-900 transition-colors rounded-lg">
                 <img
                   className="w-8 h-8 rounded-full object-cover"
                   src="https://img.freepik.com/vector-gratis/estatua-diosa-griega-selfie-adiccion-redes-sociales-tecnicas-mixtas_53876-116525.jpg"
@@ -62,6 +62,12 @@ const Header = () => {
                     Lorem Ipsum is a dummy text...
                   </p>
                 </div>
+              </Link>
+            </MenuItem>
+            <MenuDivider className="h-px font-bold bg-secondary-900 my-4" />
+            <MenuItem className='p-0 hover:bg-transparent text-tertiary font-bold flex flex-1 justify-center cursor-default hover:bg-secondary-900 hover:text-primary transition-colors rounded-lg'>
+              <Link to="" className="py-2">
+                Read all
               </Link>
             </MenuItem>
           </Menu>
